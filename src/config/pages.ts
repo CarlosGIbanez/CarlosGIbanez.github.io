@@ -8,13 +8,13 @@ export const PAGES: PagesConfig = {
     },
     blog: {
         title: "Blog",
-        subtitle: "Thoughts on physics, philosophy, and music.",
+        subtitle: "Thoughts on AI, Economics and other topics.",
         isActive: true,
     },
     publications: {
         title: "Publications",
         subtitle: "A collection of research papers and scientific articles.",
-        isActive: true,
+        isActive: false,
     },
     talks: {
         title: "Talks & Presentations",
@@ -24,7 +24,7 @@ export const PAGES: PagesConfig = {
     projects: {
         title: "Code & Projects",
         subtitle: "Open source contributions and technological experiments.",
-        isActive: true,
+        isActive: false,
     },
     teaching: {
         title: "Teaching",

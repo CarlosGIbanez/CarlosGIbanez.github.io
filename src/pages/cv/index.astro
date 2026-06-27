@@ -1,8 +1,8 @@
 ---
 import { getEntry, render } from "astro:content";
-import BaseLayout from "../../layouts/BaseLayout.astro";
 import Timeline from "../../components/ui/Timeline.astro";
 import { PAGES } from "../../config";
+import BaseLayout from "../../layouts/BaseLayout.astro";
 
 if (PAGES.cv.isActive === false) {
     return Astro.redirect("/404");
@@ -27,34 +27,38 @@ const { name, title, experience = [], education = [] } = cvEntry.data;
 
     <div class="container-narrow">
         {
-            experience.length > 0 && (
-                <section class="section">
-                    <h2 class="section-title border-b border-border pb-2">
-                        Professional Experience
-                    </h2>
-                    <Timeline items={experience.map(exp => ({
-                        title: exp.role,
-                        subtitle: exp.institution,
-                        period: exp.period,
-                        description: exp.description
-                    }))} />
-                </section>
-            )
-        }
-
-        {
             education.length > 0 && (
                 <section class="section">
                     <h2 class="section-title border-b border-border pb-2">
                         Education
                     </h2>
-                    <Timeline items={education.map(edu => ({
-                        title: edu.degree,
-                        subtitle: edu.institution,
-                        period: edu.period,
-                        description: edu.description,
-                        thesis: edu.thesis
-                    }))} />
+                    <Timeline
+                        items={education.map((edu) => ({
+                            title: edu.degree,
+                            subtitle: edu.institution,
+                            period: edu.period,
+                            description: edu.description,
+                            thesis: edu.thesis,
+                        }))}
+                    />
+                </section>
+            )
+        }
+
+        {
+            experience.length > 0 && (
+                <section class="section">
+                    <h2 class="section-title border-b border-border pb-2">
+                        Professional Experience
+                    </h2>
+                    <Timeline
+                        items={experience.map((exp) => ({
+                            title: exp.role,
+                            subtitle: exp.institution,
+                            period: exp.period,
+                            description: exp.description,
+                        }))}
+                    />
                 </section>
             )
         }
@@ -64,4 +68,3 @@ const { name, title, experience = [], education = [] } = cvEntry.data;
         </div>
     </div>
 </BaseLayout>
-

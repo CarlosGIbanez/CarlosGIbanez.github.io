@@ -1,9 +1,9 @@
-import type { SiteConfig, ThemeConfig, SettingsConfig, UmamiAnalyticsConfig, AnalyticsConfig } from "../types";
+import type { AnalyticsConfig, SettingsConfig, SiteConfig, ThemeConfig, UmamiAnalyticsConfig } from "../types";
 
 export const SITE: SiteConfig = {
     website: "https://CarlosGIbanez.github.io",
     author: "Carlos Gorostiza",
-    desc: "Carlos Gorostiza — Economics student at UANL working on AI Safety.",
+    desc: "Carlos Gorostiza - Economics student working on AI Safety.",
     title: "Carlos Gorostiza",
     ogImage: "",
     postPerPage: 5,

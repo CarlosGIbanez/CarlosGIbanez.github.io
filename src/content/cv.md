@@ -1,32 +1,37 @@
 ---
-name: "Claude Shannon"
-title: "Mathematician and Electrical Engineer"
+name: "Carlos Arnoldo Gorostiza Ibáñez"
+title: "Undergrad economics student"
 experience:
-  - role: "Research Mathematician"
-    institution: "Bell Telephone Laboratories"
-    period: "1941 - 1972"
-    description: "Conducted groundbreaking research in information theory, cryptography, and digital computing."
-  - role: "Professor of Electrical Engineering"
-    institution: "MIT"
-    period: "1958 - 1978"
-    description: "Taught courses in information theory, switching theory, and mathematical foundations of computing."
+  - role: "Social Service in Computer Technology"
+    institution: "UANL"
+    period: "June 2025 – November 2025"
+    description: "Worked with multiple departments maintaining the systems up and running successfully."
 education:
-  - degree: "PhD in Mathematics"
-    institution: "MIT"
-    period: "1936 - 1940"
-    thesis: "An Algebra for Theoretical Genetics"
-    description: "Developed mathematical foundations for genetic inheritance."
-  - degree: "Bachelor of Science in Electrical Engineering"
-    institution: "University of Michigan"
-    period: "1932 - 1936"
+  - degree: "Bachelor’s Degree in Economics"
+    institution: "UANL"
+    period: "2023-2027"
+    description: "Learn all the fundamentals and practicals for economic analysis and judgment"
+  - degree: "Technical High School Diploma in Computer Systems"
+    institution: "UANL"
+    period: "2020-2023"
+    description: "Learn to operate, modify and create computational systems"
 ---
 
 ## Skills
-- Information Theory
-- Mathematics
-- Electrical Engineering
-- Cryptography
-- Computer Science
+
+- **Computer Skills**:
+  - Python (NumPy, Pandas, Matplotlib)
+  - R
+  - Econometrics
+  - Data Visualization
+  - Machine Learning
+  - Neural Networks (Pytorch)
+  - Local LLMs
+- **Soft Skills**:
+  - Research-oriented
+  - Self-development
+- Language: English C1
 
 ## Biographical Summary
-Extra biographical notes or a summary can go here.
+
+Technical High School Diploma in Computer Systems currently in the 3rd year of bachelor’s degree in economics. Experienced with Python, and Deep Learning frameworks. I’m interested in working full time in AI Safety fields such as Alignment, Interpretability and/or control.
