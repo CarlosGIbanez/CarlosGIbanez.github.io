@@ -15,15 +15,15 @@ export const SOCIALS: SocialLink[] = [
     },
     {
         name: "Google Scholar",
-        href: "https://scholar.google.com/",
+        href: "https://scholar.google.com/citations?user=QnOgg5cAAAAJ",
         linkTitle: `Carlos Gorostiza on Google Scholar`,
-        isActive: false,
+        isActive: true,
     },
     {
         name: "ORCID",
-        href: "https://orcid.org/",
+        href: "https://orcid.org/0009-0008-0370-7518",
         linkTitle: `Carlos Gorostiza on ORCID`,
-        isActive: false,
+        isActive: true,
     },
     {
         name: "LinkedIn",
