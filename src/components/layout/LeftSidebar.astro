@@ -7,21 +7,31 @@ import { Image } from 'astro:assets';
 const activeSocials = SOCIALS.filter((s) => s.isActive);
 const bioCollection = await getCollection("bio");
 const bio = bioCollection[0]?.data;
+
+const initials = bio?.name
+    ? bio.name.split(/\s+/).filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase()
+    : "";
 ---
 
 <aside class="sidebar max-lg:flex-row max-lg:flex-wrap max-lg:gap-3 max-md:gap-2">
     <div class="flex flex-col items-center text-center max-lg:flex-row max-lg:text-left max-lg:gap-3 max-lg:items-center max-md:gap-2">
-        {bio?.avatar && (
+        {bio?.avatar ? (
             <Image
                 src={`/${bio.avatar}`}
                 alt={`Avatar of ${bio.name}`}
-                width={160} /* Maximum width in global.css for sidebar-avatar class */
+                width={160}
                 height={160}
-                densities={[1.5, 2]} 
+                densities={[1.5, 2]}
                 format="webp"
                 class="sidebar-avatar"
                 loading="eager"
             />
+        ) : (
+            initials && (
+                <div class="sidebar-avatar sidebar-avatar-initials" aria-hidden="true">
+                    {initials}
+                </div>
+            )
         )}
         <div class="flex flex-col items-center max-lg:items-start">
             {bio?.name && <h1 class="sidebar-name">{bio.name}</h1>}

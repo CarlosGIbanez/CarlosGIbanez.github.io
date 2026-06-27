@@ -440,6 +440,17 @@ a:hover,
     border-color: var(--accent);
 }
 
+.sidebar-avatar-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--surface);
+    color: var(--foreground);
+    font-weight: 800;
+    font-size: 2.5rem;
+    letter-spacing: -0.02em;
+}
+
 .sidebar-name {
     font-size: 1.5rem;
     font-weight: 800;
@@ -913,6 +924,10 @@ a:hover,
         height: 112px;
     }
 
+    .sidebar-avatar-initials {
+        font-size: 1.75rem;
+    }
+
     .main-body {
         padding: 1rem 1.5rem;
     }
@@ -932,6 +947,10 @@ a:hover,
     .sidebar-avatar {
         width: 80px;
         height: 80px;
+    }
+
+    .sidebar-avatar-initials {
+        font-size: 1.25rem;
     }
 
     .sidebar-name {

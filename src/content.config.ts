@@ -57,7 +57,7 @@ const bio = defineCollection({
     loader: glob({ pattern: "bio.md", base: "./src/content" }),
     schema: z.object({
         name: z.string(),
-        avatar: z.string(),
+        avatar: z.string().optional(),
         shortBio: z.string().optional(),
         institution: z.string().optional(),
     }),

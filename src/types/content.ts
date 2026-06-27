@@ -1,6 +1,6 @@
 export interface Bio {
     name: string;
-    avatar: string;
+    avatar?: string;
     shortBio?: string;
     institution?: string;
 }
