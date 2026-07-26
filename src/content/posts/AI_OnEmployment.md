@@ -47,8 +47,11 @@ On the other hand, Roldan (2025) found that, in the case of academic debates, th
 It seems to be that, in complex and long-horizon tasks, the more experienced workers tend to gain more from using the AI than their junior peers. I think this is because architectural and design decisions demand judgment and critical thinking, which remain a bottleneck for AI.
 
 In short:
+
 $$ \text{Short, well specified tasks} \to \text{Equalizing effect} $$
+
 $$ \text{Long-horizon tasks} \to \text{Skill-biased effect} $$
+
 And these findings connect well through the lens of a _complementary-based_ theory, like _O-Ring_.
 
 ## So, what would the effect on employment and wages be?
@@ -69,22 +72,22 @@ You should probably read [this](https://80000hours.org/career-guide/most-valuabl
 Reading the research of Mäkelä et al. (2026), Shen & Tamkin (2026) and the findings of the _World Economic Forum_ (Zahidi, 2025), I found that the most in-demand skills right now are the ones that enable effective and efficient collaboration with AI systems, supervising its behavior, and evaluating and correcting its results; as well as abilities of self-management and collaboration with others, some of these are:
 
 - AI collaboration:
- 	- Supervising behavior - Can you prevent the AI from taking inefficient or dangerous paths in your job?
- 	- Evaluation - Can you tell a plausible-looking design from a correct one?
- 	- Correction of results - Once an answer is produced, can you identify errors fast and reliably?
- 	- Critical thinking - Is the answer the AI gave you the best it can be?
- 	- Ethical judgment - Is what you're doing with AI ethical? Does it break any norms?
- 	- Systems thinking - Are you capable of examining complex systems as a whole?
+  - Supervising behavior - Can you prevent the AI from taking inefficient or dangerous paths in your job?
+  - Evaluation - Can you tell a plausible-looking design from a correct one?
+  - Correction of results - Once an answer is produced, can you identify errors fast and reliably?
+  - Critical thinking - Is the answer the AI gave you the best it can be?
+  - Ethical judgment - Is what you're doing with AI ethical? Does it break any norms?
+  - Systems thinking - Are you capable of examining complex systems as a whole?
 - Self-management
- 	- Self-awareness
- 	- Emotional intelligence
- 	- Lifelong learning and growth
+  - Self-awareness
+  - Emotional intelligence
+  - Lifelong learning and growth
 - Collaboration with others
- 	- Active listening
- 	- Communication
- 	- Conflict resolution
- 	- Coaching
- 	- Mentoring
+  - Active listening
+  - Communication
+  - Conflict resolution
+  - Coaching
+  - Mentoring
 
 ## Now the AGI case
 
