@@ -666,6 +666,7 @@ a:hover,
     text-underline-offset: 4px;
     font-weight: 600;
     transition: color 0.2s ease;
+    overflow-wrap: anywhere;
 }
 
 .prose a:hover {
