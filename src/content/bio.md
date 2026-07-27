@@ -12,4 +12,8 @@ If you want to contact me, send me an email: CarlosGIbanez AT proton.me
 
 ## Research Interests
 
-**AI Safety**, alignment, interpretability, control, the economics of transformative technology, and game theory.
+Mechanistic interpretability, AI control and scalable oversight, and multi-agent safety.
+
+My angle is methodological: activation patching is the do-operator applied to a network's internal graph, and the empirical discipline econometrics has built around causal claims (identification, variance across seeds, multiple comparisons, effect sizes with confidence intervals) is underused in interpretability research.
+
+Also interested in the economics of transformative AI: institutional design and mechanism design for oversight, and strategic behavior among LLM agents in market environments.
