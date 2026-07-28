@@ -23,7 +23,7 @@ education:
 
 ### Monetary Policy Recommendation for Banco de México
 
-> 2026 | Reto Banxico — team submission, selected among the top 11
+> 2026 | Reto Banxico — Selected among the top 11 / 194 teams
 
 Documentary and data-analysis research producing a monetary policy recommendation, combining macroeconomic evidence with an institutional analysis of Banco de México's policy framework drawn from New Institutional Economics (central bank independence, credible commitment, and the conditions under which policy announcements are believed).
 
