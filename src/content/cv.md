@@ -49,6 +49,17 @@ Tools: R, Python, LaTeX
 
 [Check the repo here](https://github.com/CarlosGIbanez/Inflation-Expectations-Forecasting)
 
+### Agent negotiation harness
+
+> 2026 | Personal
+
+Harness for LLM agents in wich they negotiate for an invisible good and take turns as the seller and buyer. Buil-in metrics
+to analyze their behavior across rounds and games.
+
+Tools: Python, LaTeX, Bash
+
+[Check the repo here](https://github.com/CarlosGIbanez/negotiation-harness)
+
 ### Self-hosted research infrastructure
 
 > 2025 – present | Personal
