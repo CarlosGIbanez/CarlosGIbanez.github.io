@@ -15,7 +15,7 @@ These ideas are heavily inspired by [Neel Nanda's blogs](https://dynalist.io/d/p
 
 We can synthesize the process of making an effective plan as:
 
-1. Identythe problem you want to solve (or the goal you want to achieve)
+1. Identify the problem you want to solve (or the goal you want to achieve)
 2. Make a plan
 3. Identify possible failure modes
 4. Patch it
