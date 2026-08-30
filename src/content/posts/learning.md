@@ -88,11 +88,11 @@ Block 1 is for reconstructing the core of your last session from memory, practic
 Block 2 is for actually studying the new material. You can read/watch it, but don't just consume. Split this block into several mini-sections like:
 
 - For every 20-30 minutes of input (reading, watching), stop and do 10 minutes of encoding
- 	- simplify it
- 	- compare it to something you already know
- 	- connect it to adjacent concepts
- 	- group it in a mind map
- 	- identify **knowledge gaps** (concepts, techniques, facts you don't fully understand or don't get into your memory)
+  - simplify it
+  - compare it to something you already know
+  - connect it to adjacent concepts
+  - group it in a mind map
+  - identify **knowledge gaps** (concepts, techniques, facts you don't fully understand or don't get into your memory)
 
 Block 3 is for skimming the next topic, also priming your brain. When you come back to it, it won't feel completely new.
 
