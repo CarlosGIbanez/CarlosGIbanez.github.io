@@ -698,6 +698,17 @@ a:hover,
     padding: 0;
 }
 
+/* Shiki dual-theme tokens (colors arrive as CSS vars, not inline styles) */
+.astro-code,
+.astro-code span {
+    color: var(--shiki-light);
+}
+
+html[data-theme="dark"] .astro-code,
+html[data-theme="dark"] .astro-code span {
+    color: var(--shiki-dark);
+}
+
 .prose table {
     display: block;
     overflow-x: auto;
