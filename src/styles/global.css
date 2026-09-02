@@ -698,6 +698,33 @@ a:hover,
     padding: 0;
 }
 
+.prose table {
+    display: block;
+    overflow-x: auto;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+}
+
+.prose th,
+.prose td {
+    padding: 0.5rem 0.9rem;
+    text-align: left;
+    vertical-align: top;
+    border-bottom: 1px solid var(--border);
+}
+
+.prose th {
+    font-weight: 700;
+    white-space: nowrap;
+    border-bottom-width: 2px;
+}
+
+.prose td code {
+    white-space: nowrap;
+}
+
 .prose img {
     max-width: 100%;
     height: auto;
