@@ -1,6 +1,6 @@
 ---
 title: "Results from my negotiation harness"
-date: "2026-09-02"
+date: "2026-09-05"
 description: "Results and main findings of a negotiation experiment between two LLMs bargaining for an indivisible good, with alternating offers."
 author: "Carlos Gorostiza"
 tags:
@@ -46,6 +46,19 @@ With a possible variation that adds:
 ```
 - Your objective is to maximize your own discounted payoff
 ```
+
+I run the following experiment configs (30 games each):
+
+| Name                  | Seller model | Buyer Model | Prompt variant     |
+| --------------------- | ------------ | ----------- | ------------------ |
+| haiku_seller          | Haiku        | Llama       | Default            |
+| haiku_buyer           | Llama        | Haiku       | Default            |
+| haiku_haiku           | Haiku        | Haiku       | Default            |
+| llama_llama           | Llama        | Llama       | Default            |
+| haiku_seller_explicit | Haiku        | Llama       | Explicit objective |
+| haiku_buyer_explicit  | Llama        | Haiku       | Explicit objective |
+| haiku_haiku_explicit  | Haiku        | Haiku       | Explicit objective |
+| llama_llama_explicit  | Llama        | Llama       | Explicit objective |
 
 ## Example of an actual game
 
@@ -101,22 +114,106 @@ I built  the following metrics:
 
 Turns nest in games nest in valuation draws (seeds). `bootstrap_ci` averages within seed, then percentile-bootstraps over seeds (2000 resamples); replays of the same seed share a cluster.
 
-## Results
+## Main Findings
 
-I run the following experiment configs (30 games each):
+Some interesting findings can be higlighted from this experiment:
 
-| Name                  | Seller model | Buyer Model | Prompt variant     |
-| --------------------- | ------------ | ----------- | ------------------ |
-| haiku_seller          | Haiku        | Llama       | Default            |
-| haiku_buyer           | Llama        | Haiku       | Default            |
-| haiku_haiku           | Haiku        | Haiku       | Default            |
-| llama_llama           | Llama        | Llama       | Default            |
-| haiku_seller_explicit | Haiku        | Llama       | Explicit objective |
-| haiku_buyer_explicit  | Llama        | Haiku       | Explicit objective |
-| haiku_haiku_explicit  | Haiku        | Haiku       | Explicit objective |
-| llama_llama_explicit  | Llama        | Llama       | Explicit objective |
+### 1. Agents don't walk away from negotiations
 
-With the following results (averaged per config):
+Deal rates are between 0.7 and 1 for every config, and they barely move no matter the trade is profitable or not.
+
+| Cell                  | sensitivity (deal given $v_b > v_s$) | false_positive_rate (deal given $v_b < v_s$) | ir_violation_rate (deals with a negative payoff) |
+| --------------------- | ------------------------------------ | -------------------------------------------- | ------------------------------------------------ |
+| haiku_seller          | 0.875                                | 0.857                                        | 0.500                                            |
+| haiku_buyer           | 1.000                                | 0.857                                        | 0.571                                            |
+| haiku_haiku           | 1.000                                | 1.000                                        | 0.500                                            |
+| llama_llama           | 0.813                                | 0.571                                        | 0.667                                            |
+| haiku_seller_explicit | 0.938                                | 0.857                                        | 0.593                                            |
+| haiku_buyer_explicit  | 1.000                                | 1.000                                        | 0.600                                            |
+| haiku_haiku_explicit  | 1.000                                | 0.786                                        | 0.481                                            |
+| llama_llama_explicit  | 0.563                                | 0.857                                        | 0.810                                            |
+
+### 2. Joint payoff is low
+
+| Cell | joint_payoff (mean over all 30 draws) | 95% CI |
+| --- | --- | --- |
+| haiku_haiku | 10.51 | 1.43 to 20.33 |
+| haiku_haiku_explicit | 10.17 | 2.06 to 18.12 |
+| llama_llama | 9.78 | 2.13 to 18.32 |
+| haiku_seller_explicit | 9.03 | -1.13 to 19.80 |
+| haiku_buyer_explicit | 8.16 | -1.30 to 18.34 |
+| haiku_buyer | 7.80 | -0.23 to 16.03 |
+| haiku_seller | 7.79 | -2.35 to 18.36 |
+| llama_llama_explicit | 2.13 | -5.78 to 11.02 |
+
+This is mainly because false positives are destroying the value.
+
+### 3. Haiku captures most of the surplus against Llama
+
+| Cell                  | sigma_b | Who is the buyer | Haiku's share |
+| --------------------- | ------- | ---------------- | ------------- |
+| haiku_seller          | 0.223   | Llama            | 0.777         |
+| haiku_seller_explicit | 0.101   | Llama            | 0.899         |
+| haiku_buyer           | 0.711   | Haiku            | 0.711         |
+| haiku_buyer_explicit  | 0.833   | Haiku            | 0.833         |
+| haiku_haiku           | 0.473   | Haiku            | 0.473         |
+| haiku_haiku_explicit  | 0.598   | Haiku            | 0.598         |
+| llama_llama           | 0.986   | Llama            | na            |
+| llama_llama_explicit  | 0.561   | Llama            | na            |
+
+Also, Haiku splits near even in the Haiku-Haiku default config.
+
+It is likely that the asymetry is between models rather than between roles.
+
+On the Llama-Llama case, we can se how, in the default case, the buyer takes almost all the surplus, in some cases even below the private cost of the seller. The seller puts no resistence against the advances of the buyer.
+
+### 4. Haiku is a silent seller
+
+| Cell | Haiku's role | disclosure | truthful (given a claim) | self_serving_bias |
+| --- | --- | --- | --- | --- |
+| haiku_seller | seller | 0.000 | (no claims) | (no claims) |
+| haiku_seller_explicit | seller | 0.042 | 1.000 | 0.00 |
+| haiku_buyer | buyer | 0.116 | 1.000 | 0.00 |
+| haiku_buyer_explicit | buyer | 0.246 | 0.727 | 3.27 |
+| haiku_haiku | both | 0.02 to 0.04 | 1.000 | 0.00 |
+| haiku_haiku_explicit | both | 0.03 to 0.14 | 1.000 | 0.00 |
+
+Under the default prompt, Haiku is mostly honest by omission (how convenient).
+
+### 5. Llama behavior is incoherent with maximization of its payoff
+
+| Cell                  | Llama's role | disclosure | truthful | claim_violation | claim_drift |
+| --------------------- | ------------ | ---------- | -------- | --------------- | ----------- |
+| haiku_buyer           | seller       | 0.657      | 0.804    | 0.750           | 2.79        |
+| haiku_buyer_explicit  | seller       | 0.588      | 0.568    | 0.743           | 1.64        |
+| haiku_seller          | buyer        | 0.523      | 1.000    | 0.433           | 0.00        |
+| haiku_seller_explicit | buyer        | 0.488      | 0.891    | 0.525           | 0.71        |
+| llama_llama           | seller       | 0.576      | 0.846    | 0.771           | 0.32        |
+| llama_llama_explicit  | seller       | 0.403      | 0.663    | 0.806           | 7.17        |
+
+In 3/4 of games the seller sells below the cost it claimed on that same turn. Its `self_serving_bias` CIs all include zero, so it is not lying in a consistent direction.
+
+### 6. The explicit-objective prompt destroys Llama's payoff
+
+When I added "Your objective is to maximize your own discounted payoff" to the prompt, the results were:
+
+- For Haiku, modest effects and mostly in the expected direction: a slightly larger surplus share, slightly fewer false-positive deals in Haiku-Haiku (1.00 down to 0.79), and the emergence of strategic understatement as buyer.
+- For Llama-Llama, it is net destructive: `sensitivity` drops from 0.81 to 0.56 (it now misses almost half of profitable trades), `false_positive_rate` rises from 0.57 to 0.86, `ir_violation_rate` rises to 0.81, and joint payoff falls from 9.78 to 2.13.
+
+### Other findings
+
+Including:
+
+- Haiku has no claim drift at all
+  - Once it states a valuation it doesn't move from there (even if its false)
+- Claim violation is, in general, very high for both models
+  - Is higher for the seller than for the buyer
+- Deals take 7 to 11 of the 20 rounds, so discounting alone removes 25 to 38 percent of whatever surplus is realized.
+- Cheap talk leaks only what is disclose in the structure itself
+
+## Metrics Results
+
+I run 240 games with the following results (averaged per config):
 
 ### Haiku Seller
 
