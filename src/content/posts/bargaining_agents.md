@@ -10,6 +10,10 @@ tags:
 
 I built an agent harness where two LLMs (one seller, one buyer) bargain for an indivisible good, with alternating offers. Both have private valuations and discounting rates. Cheap talk is allowed; private reasoning never crosses between agents.
 
+The harness code is available in <https://github.com/CarlosGIbanez/negotiation-harness>
+
+The result's data from the experiment is available [here](https://huggingface.co/datasets/CarlosGI/llm-bargaining-transcripts)
+
 The models I test were anthropic/claude-haiku-4.5 and meta-llama/llama-3.1-8b-instruct.
 
 The default prompt is:
