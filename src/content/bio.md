@@ -12,4 +12,4 @@ If you want to contact me, send me an email: CarlosGIbanez AT proton.me
 
 ## Research Interests
 
-Interested in organisms of misalignment, AI control and scalable oversight, multi-agent safety (particularly strategic behavior and collusion among LLM agents in market environments), and causal-abstraction interpretability.
+Interested in multi-agent safety (particularly strategic behavior and collusion among LLM agents; and MARL dynamics and emergent agency), evaluation of capabilities/propensities, scalable oversight and causal-abstraction interpretability.
