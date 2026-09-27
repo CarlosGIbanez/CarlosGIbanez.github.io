@@ -4,12 +4,20 @@ shortBio: "Economics student working on AI Safety, trying to make AI go well."
 institution: "UANL"
 ---
 
-I am an economics undergraduate at **UANL** (Universidad Autónoma de Nuevo León), working at the intersection of economics and AI Safety.
+I'm Carlos Gorostiza Ibáñez (full name: Carlos Arnoldo Gorostiza Ibáñez), an AI safety researcher working on multi-agent safety and cooperative AI.
 
-My main interest is making sure that increasingly capable AI systems are safe and beneficial. I approach this from both a technical and an economics and social science angle.
+I'm currently a Research Fellow at SPAR (Fall 2026), working with Amritanshu Prasad on strategic interaction between AI agents: crisis bargaining, escalation, and commitment devices.
 
-If you want to contact me, send me an email: CarlosGIbanez AT proton.me
+Research interests
 
-## Research Interests
+- Collusion among LLM agents
+- Bargaining, escalation, and cooperation failures between AI agents
+- MARL dynamics and collective agency
 
-Interested in multi-agent safety (particularly strategic behavior and collusion among LLM agents; and MARL dynamics and emergent agency), evaluation of capabilities/propensities, scalable oversight and causal-abstraction interpretability.
+I bring economics and game theory to these problems. I'm in the final year of my bachelor's in Economics at UANL (Universidad Autónoma de Nuevo León), and I hold a Technical Diploma in Computer Systems, so I build and run my own experimental infrastructure.
+
+This blog holds everything I write. Technical posts also appear on LessWrong, and accessible ones on Medium and Substack.
+
+Based in Monterrey, Mexico · open to remote.
+CV: carlosgibanez.github.io/cv
+Contact: CarlosGIbanez AT proton.me
