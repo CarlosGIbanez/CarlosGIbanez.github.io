@@ -1,6 +1,6 @@
 ---
 name: "Carlos Gorostiza"
-shortBio: "Economics student working on AI Safety, trying to make AI go well."
+shortBio: "Technical AI multi-agent safety researcher. Trying to make AI go well."
 institution: "UANL"
 ---
 
