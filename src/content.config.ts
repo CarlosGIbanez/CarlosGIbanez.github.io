@@ -95,6 +95,11 @@ const cv = defineCollection({
     }),
 });
 
+const library = defineCollection({
+    loader: glob({ pattern: "library.md", base: "./src/content" }),
+    schema: z.object({}),
+});
+
 export const collections = {
     'publications': publications,
     'talks': talks,
@@ -103,4 +108,5 @@ export const collections = {
     'projects': projects,
     'cv': cv,
     'teaching': teaching,
+    'library': library,
 };

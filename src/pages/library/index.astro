@@ -1,0 +1,30 @@
+---
+import { getEntry, render } from "astro:content";
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import { PAGES } from "../../config";
+
+if (PAGES.library.isActive === false) {
+    return Astro.redirect("/404");
+}
+
+const libraryEntry = await getEntry("library", "library");
+if (!libraryEntry) {
+    throw new Error(
+        "Library content not found. Please ensure src/content/library.md exists.",
+    );
+}
+
+const { Content } = await render(libraryEntry);
+---
+
+<BaseLayout title={PAGES.library.title}>
+    <div class="container-narrow">
+        <header class="page-header">
+            <h1 class="page-title">{PAGES.library.title}</h1>
+            <p class="page-subtitle">{PAGES.library.subtitle}</p>
+        </header>
+        <div class="prose">
+            <Content />
+        </div>
+    </div>
+</BaseLayout>

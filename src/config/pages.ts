@@ -23,13 +23,18 @@ export const PAGES: PagesConfig = {
     },
     projects: {
         title: "Code & Projects",
-        subtitle: "Open source contributions and technological experiments.",
+        subtitle: "Open source contributions and experiments.",
         isActive: true,
     },
     teaching: {
         title: "Teaching",
         subtitle: "Academic courses and educational materials.",
         isActive: false,
+    },
+    library: {
+        title: "Library",
+        subtitle: "Books, blogs and articles I recommend.",
+        isActive: true,
     },
     tags: {
         title: "Tags",
