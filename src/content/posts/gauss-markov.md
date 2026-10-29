@@ -13,9 +13,13 @@ The Gauss-Markov assumptions are the conditions under which OLS is the best line
 ## 1. Linear in parameters
 
 The population model can be written as
-$$  \mathbf{y} = \mathbf{X} \boldsymbol{\beta} + \mathbf{u}  $$
+$$
+\mathbf{y} = \mathbf{X} \boldsymbol{\beta} + \mathbf{u}
+$$
 in matrix notation. Or
-$$ y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + ... + \beta_k x_{ik} + u_i, \ \ \ \forall i $$
+$$
+y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + ... + \beta_k x_{ik} + u_i, \ \ \ \forall i
+$$
 That is, the model must be linear in the $\beta$'s (not necessarily in the variables).
 
 Examples:
@@ -60,7 +64,9 @@ These first three assumptions are the  “can I even run this regression, and i
 
 ## 4. Zero conditional mean
 
-$$ E[u|X] = 0 $$
+$$
+E[u|X] = 0
+$$
 
 In scalar form, combined with random sampling: $E[u_i|x_{i1}, ..., x_{ik}]=0$. Knowing someone's regressors tells you nothing about the average of their unobservables.
 
@@ -81,16 +87,22 @@ In scalar form, combined with random sampling: $E[u_i|x_{i1}, ..., x_{ik}]=0$. K
 > _Intuitively_: If the unobservables move systematically with $X$, OLS can’t tell them apart from the effect of $X$. It attributes part of their effect to $X$, so $\hat\beta$ absorbs it.
 
 We can see it with the sampling error, substituting $y = X \beta + u$ in the estimator $\hat{\beta}_\text{OLS}$ we have:
-$$ E[\hat{\beta}_\text{OLS}|X] = \underbrace{\beta}_\text{Truth} + \underbrace{(X^T X)^{-1}X^T E[u|X]}_\text{bias} $$
+$$
+E[\hat{\beta}_\text{OLS}|X] = \underbrace{\beta}_\text{Truth} + \underbrace{(X^T X)^{-1}X^T E[u|X]}_\text{bias}
+$$
 The sampling error depends on the value of $E[u| X]$, if the error averages out to zero ($E[u|X]=0$), then the $\hat{\beta}_\text{OLS}$ is unbiased.
 
 **How to solve it**. You need to develop good econometrician judgment, and apply: Instrumental Variables, Generalized Method of Moments, Control Function, Fixed Effects, Difference-in-Differences, Heckman Selection Correction for sample selection, etc., each of which trades assumption 4 for a different, hopefully more credible, assumption.
 
 ## 5. Homoskedasticity
 
-$$ Var(u|X) = \sigma^2 I_n $$
+$$
+Var(u|X) = \sigma^2 I_n
+$$
 where $I_n$ is an $n \times n$ identity matrix. In full
-$$ Var(u|X) = \begin{bmatrix} \sigma^2 & 0 & 0 & \cdots & 0 \\ 0 & \sigma^2 & 0 & \cdots & 0 \\ \vdots & \vdots & & \ddots & \vdots \\ 0 & 0 & \cdots & & \sigma^2 \end{bmatrix} $$
+$$
+Var(u|X) = \begin{bmatrix} \sigma^2 & 0 & 0 & \cdots & 0 \\ 0 & \sigma^2 & 0 & \cdots & 0 \\ \vdots & \vdots & & \ddots & \vdots \\ 0 & 0 & \cdots & & \sigma^2 \end{bmatrix}
+$$
 A matrix with the diagonal of $\sigma^2$ and 0's everywhere else.
 
 - **Diagonal, same $\sigma^2$ everywhere**: the error variance doesn't depend on $X$. In scalar form, $Var(u_i|x_i) = \sigma^2$.
