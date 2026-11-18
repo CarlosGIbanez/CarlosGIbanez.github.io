@@ -29,7 +29,7 @@ education:
 
 > 2026 | Personal
 
-Harness for LLM agents in wich they negotiate for an indivisible good and take turns as the seller and buyer. Buil-in metrics
+Harness for LLM agents in which they negotiate for an indivisible good and take turns as the seller and buyer. Buil-in metrics
 to analyze their behavior across rounds and games.
 
 Tools: Python, LaTeX, Bash
