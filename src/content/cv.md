@@ -2,6 +2,10 @@
 name: "Carlos Arnoldo Gorostiza Ibáñez"
 title: "Undergrad economics student"
 experience:
+  - role: "SPAR fellow"
+    institution: "Supervised Program for Alignment Research (SPAR)"
+    period: "August 2026 - December 2026"
+    description: "I create and maintain the infrastructure (harness) for multi-agent experiments, using python, inspect, provider APIs, and pydantic."
   - role: "Systems Support. Departamento de Informática"
     institution: "UANL"
     period: "June 2025 – November 2025"
@@ -20,6 +24,17 @@ education:
 ---
 
 ## Research & Projects
+
+### Agent negotiation harness
+
+> 2026 | Personal
+
+Harness for LLM agents in wich they negotiate for an indivisible good and take turns as the seller and buyer. Buil-in metrics
+to analyze their behavior across rounds and games.
+
+Tools: Python, LaTeX, Bash
+
+[Check the repo here](https://github.com/CarlosGIbanez/negotiation-harness)
 
 ### Monetary Policy Recommendation for Banco de México
 
@@ -49,17 +64,6 @@ Tools: R, Python, LaTeX
 
 [Check the repo here](https://github.com/CarlosGIbanez/Inflation-Expectations-Forecasting)
 
-### Agent negotiation harness
-
-> 2026 | Personal
-
-Harness for LLM agents in wich they negotiate for an invisible good and take turns as the seller and buyer. Buil-in metrics
-to analyze their behavior across rounds and games.
-
-Tools: Python, LaTeX, Bash
-
-[Check the repo here](https://github.com/CarlosGIbanez/negotiation-harness)
-
 ### Self-hosted research infrastructure
 
 > 2025 – present | Personal
@@ -68,24 +72,25 @@ Debian home server supporting personal research compute and data.
 
 Encrypted, append-only backup system (restic + rest-server) with systemd timer automation and authenticated remote access
 Site-to-site WireGuard VPN linking workstation and server
-Hardware fault diagnosis
 
 ---
 
 ## Current Work
 
-- **Alignment Research Engineer Accelerator (ARENA) curriculum**, self-directed: Transformer implementation from scratch, mechanistic interpretability, and TransformerLens.
+- **Research Fellow at SPAR (Fall 2026)**, working with Amritanshu Prasad on strategic interaction between AI agents: crisis bargaining, escalation, and commitment devices.
 
 - **Causal inference**, self-directed: Working from Cunningham, Huntington-Klein, Angrist & Pischke, and Pearl toward causal-interpretability methods (causal mediation, activation and path patching, causal scrubbing).
 
 - **Game theory and mechanism design**, self-directed: Tadelis, with Osborne & Rubinstein as supplement; oriented toward multi-agent safety and oversight mechanisms.
 
+- **Political Economy**, self-directed: New Institutional Economy: oriented toward multi-agent safety dynamics.
+
 ---
 
 ## Technical Skills
 
-- **Languages**: Python (intermediate–advanced), R, SQL, Bash, LaTeX
-- **Econometrics & statistics**: Time series (VAR, VECM, SARIMA, cointegration, unit roots, structural breaks), GARCH and DCC-GARCH, Causal inference (potential outcomes, DAGs, IV, DiD), Bayesian statistics, Rolling-window and out-of-sample evaluation
+- **Languages**: Python, R, SQL, Bash, LaTeX
+- **Econometrics & statistics**: Causal inference (potential outcomes, DAGs, IV, DiD), Bayesian statistics, Time series (VAR, VECM, SARIMA, cointegration, unit roots, structural breaks), GARCH and DCC-GARCH, Rolling-window and out-of-sample evaluation
 - **Machine learning**: PyTorch, NumPy, Pandas, scikit-learn, Transformer architectures, Hugging Face
-- **Systems**: Linux (Debian, Fedora), Git, Docker/Podman, systemd, WireGuard, Self-hosted infrastructure
+- **Systems**: Linux, Git, Docker/Podman, systemd, WireGuard, Self-hosted infrastructure
 - **Spoken languages**: Spanish (native), English (C1)
