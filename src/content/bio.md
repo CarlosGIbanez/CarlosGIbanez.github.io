@@ -1,5 +1,6 @@
 ---
 name: "Carlos Gorostiza"
+avatar: "face.jpeg"
 shortBio: "Technical AI multi-agent safety researcher. Trying to make AI go well."
 institution: "UANL"
 ---
