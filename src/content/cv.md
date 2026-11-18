@@ -83,7 +83,7 @@ Site-to-site WireGuard VPN linking workstation and server
 
 - **Game theory and mechanism design**, self-directed: Tadelis, with Osborne & Rubinstein as supplement; oriented toward multi-agent safety and oversight mechanisms.
 
-- **Political Economy**, self-directed: New Institutional Economics: oriented toward multi-agent safety dynamics.
+- **Political Economy**, self-directed: New Institutional Economics: Furubotn & Ritchter, with Gehlbach as formalization; oriented toward multi-agent safety dynamics.
 
 ---
 
